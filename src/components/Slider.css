@@ -1,0 +1,40 @@
+.animate {
+    background: inherit;
+    will-change: transform;
+    transition: transform 0.2s ease;
+  }
+  
+  .animate.prepare {
+    /* we do this so we can tell when the "preparing" was done
+       since there seems to be a browser bug where the preparation still takes
+       time, even with `transition: none;` */
+    transition-duration: 0.0000000000001s;
+    opacity: 0;
+  }
+  
+  .animate.prepare.from.left {
+    transform: translateX(-110%);
+  }
+  .animate.prepare.from.right {
+    transform: translateX(110%);
+  }
+  .animate.prepare.to.left {
+    transform: translateX(-1px);
+  }
+  .animate.prepare.to.right {
+    transform: translateX(1px);
+  }
+  
+  .animate:not(.prepare).to {
+    pointer-events: none;
+  }
+  .animate:not(.prepare).to.left {
+    transform: translateX(-110%);
+  }
+  .animate:not(.prepare).to.right {
+    transform: translateX(110%);
+  }
+  .animate:not(.prepare).from {
+    transform: translateX(0);
+  }
+  

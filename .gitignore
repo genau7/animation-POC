@@ -1,0 +1,29 @@
+# Ignore the .env file
+/.env
+docker/dev/.env
+
+# webpack build target folder
+/build
+
+# test coverage
+/coverage
+
+# generated locale files
+src/locales/*.po
+
+# Ignore all logfiles and tempfiles.
+*.log
+/.tmp
+/tmp
+*.swp
+*.swo
+*.un~
+*~
+
+.DS_Store
+
+node_modules
+.idea
+.project
+.vscode/
+.eslintcache
