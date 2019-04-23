@@ -1,0 +1,24 @@
+.animationContainer {
+    position: relative;
+    height: 100%;
+  }
+  .animationInit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 600ms;
+  
+    /*
+     * Don't allow users to step through quicker than our animation.
+     * Allowing users to bypass the animation would be helpful to the user...
+     * and we don't want that...
+     */
+    pointer-events: none;
+  }
+  .animate {
+    transform: translateY(0);
+  }
+  

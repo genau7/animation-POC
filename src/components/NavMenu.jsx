@@ -8,6 +8,7 @@ const renderMenu = () => (
     <li><Link to="/">Home link</Link></li>
     <li><Link to="first">First link</Link></li>
     <li><Link to="second">Second link</Link></li>
+    <li><Link to="notanimated">No animation</Link></li>
   </ul>
 );
 
